@@ -1,0 +1,12 @@
+[project]
+name = "ner"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "llama-index>=0.14.20",
+    "llama-index-graph-stores-neo4j>=0.7.0",
+    "llama-index-llms-openai>=0.7.5",
+    "neo4j>=5.28.3",
+    "python-dotenv>=1.2.2",
+]
