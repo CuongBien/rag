@@ -9,4 +9,6 @@ dependencies = [
     "llama-index-llms-openai>=0.7.5",
     "neo4j>=5.28.3",
     "python-dotenv>=1.2.2",
+    "fpdf",
+    "pymupdf4llm>=1.27.2.2",
 ]

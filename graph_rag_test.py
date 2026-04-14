@@ -2,6 +2,7 @@ import os
 from typing import Final
 
 from dotenv import load_dotenv
+from openai import PermissionDeniedError
 
 from llama_index.core import Document, Settings
 from llama_index.core import PropertyGraphIndex
@@ -9,6 +10,9 @@ from llama_index.graph_stores.neo4j import Neo4jPropertyGraphStore
 from llama_index.llms.openai import OpenAI
 from llama_index.core.llms import LLMMetadata
 from llama_index.llms.openai.utils import openai_modelname_to_contextsize
+from llama_index.core import SimpleDirectoryReader
+import pathlib
+import pymupdf4llm
 
 class GroqOpenAI(OpenAI):
     """OpenAI-compatible wrapper for Groq that bypasses the model allowlist."""
@@ -77,23 +81,50 @@ Năm 2022, TechCorp đã mua lại startup AI có tên là SmartBrain với giá
 Alice Smith, một kỹ sư dữ liệu xuất sắc, trước đây làm việc cho SmartBrain, 
 hiện đã trở thành Giám đốc AI của TechCorp sau vụ mua lại này.
 """
-    documents = [Document(text=text_data)]
+    # Load documents from /data (project-root data directory)
+    data_dir = os.path.join(os.path.dirname(__file__), "data")
+    print(f"[debug] Loading documents from: {data_dir}")
+
+    documents = []
+    for pdf_path in pathlib.Path(data_dir).glob("**/*.pdf"):
+        md_text = pymupdf4llm.to_markdown(str(pdf_path))
+        if not md_text.strip():
+            print(f"[warn] File '{pdf_path.name}' cho text rong — co the la scan/anh.")
+            continue
+        documents.append(Document(
+            text=md_text,
+            metadata={"file_name": pdf_path.name, "file_path": str(pdf_path)},
+        ))
+        print(f"[debug] Doc '{pdf_path.name}': {len(md_text)} chars")
+        print(f"[debug] Preview: {repr(md_text[:300])}")
+
+    if not documents:
+        raise RuntimeError(f"Khong doc duoc tai lieu nao tu: {data_dir}")
+
+    print(f"[debug] Tong: {len(documents)} documents")
 
     print(
         "[debug] PropertyGraphIndex.from_documents(embed_kg_nodes=False) — graph via LLM only."
     )
     print("[debug] Calling Groq for triplet extraction...")
-    index = PropertyGraphIndex.from_documents(
-        documents,
-        property_graph_store=graph_store,
-        show_progress=True,
-        embed_kg_nodes=embed_kg_nodes,
-    )
+    try:
+        index = PropertyGraphIndex.from_documents(
+            documents,
+            property_graph_store=graph_store,
+            show_progress=True,
+            embed_kg_nodes=embed_kg_nodes,
+        )
+    except PermissionDeniedError as error:
+        print("[debug] Groq request was denied while extracting triplets.")
+        raise RuntimeError(
+            "Groq API access denied (HTTP 403). "
+            "Check GROQ_API_KEY, VPN/proxy/firewall, and whether api.groq.com is reachable."
+        ) from error
     print("[debug] Upsert to Neo4j completed.")
 
     query_engine = index.as_query_engine(include_text=True)
 
-    question = "Alice Smith đang làm việc ở đâu và công ty đó do ai thành lập?"
+    question = "Ong Ly Hoang Nam co moi quan he gian tiep nao voi ba Elena Rodriguez?"
     print(f"\nCâu hỏi: {question}")
     response = query_engine.query(question)
     print(f"Trả lời: {response}")
