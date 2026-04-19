@@ -14,6 +14,10 @@ dependencies = [
     "llama-index-embeddings-huggingface>=0.6.0",
     "sentence-transformers>=3.0.0",
     "torch>=2.6.0,<2.7",
+    "torchvision>=0.21.0,<0.22",
+    "streamlit>=1.56.0",
+    "arize-phoenix>=14.8.0",
+    "openinference-instrumentation-llama-index>=4.3.9",
 ]
 
 # CUDA 12.4 wheels (GPU). Without this, uv resolves torch from PyPI as +cpu.
@@ -24,3 +28,4 @@ explicit = true
 
 [tool.uv.sources]
 torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }

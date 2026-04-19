@@ -3,6 +3,7 @@ import os
 from openai import PermissionDeniedError
 
 from llama_index.core import PropertyGraphIndex, Settings
+from llama_index.core.base.base_query_engine import BaseQueryEngine
 from llama_index.core.indices.property_graph import (
     ImplicitPathExtractor,
     SimpleLLMPathExtractor,
@@ -19,11 +20,14 @@ from .graph_store import (
 from .ingest import load_documents_from_data_dir
 from .llm_client import create_llm
 from .pg_query import create_property_graph_query_engine
+from .telemetry import setup_phoenix_tracing
 
 
-def run_pipeline(project_root: str) -> None:
+def build_query_engine(project_root: str) -> BaseQueryEngine:
     # project_root: absolute path to repo root (used for data/ and .env resolution via cwd).
+    print(f"[pipeline] Initializing query engine for project_root={project_root}")
     config = load_config(project_root)
+    setup_phoenix_tracing()
     llm = create_llm(config.groq_model, config.groq_api_key, config.groq_api_base)
     Settings.llm = llm
 
@@ -78,6 +82,21 @@ def run_pipeline(project_root: str) -> None:
         config.pg_vector_top_k,
         config.pg_rel_map_limit,
     )
-    question = "Bà Elena Rodriguez có mối liên hệ gián tiếp nào với ông Lý Hoàng Nam không?"
+    return query_engine
+
+
+def answer_question(query_engine: BaseQueryEngine, question: str) -> str:
+    print(f"[pipeline] Running question={question!r}")
+    return str(query_engine.query(question))
+
+
+def run_pipeline(project_root: str) -> None:
+    query_engine = build_query_engine(project_root)
+    question = "Ba Elena Rodriguez co moi lien he gian tiep nao voi ong Ly Hoang Nam khong?"
     print(f"\nQuestion: {question}")
-    print(f"Answer: {query_engine.query(question)}")
+    answer_text = answer_question(query_engine, question)
+    # Keep Windows cp1252 terminals from crashing on Vietnamese Unicode output.
+    safe_answer_text = answer_text.encode("ascii", errors="backslashreplace").decode(
+        "ascii"
+    )
+    print(f"Answer: {safe_answer_text}")

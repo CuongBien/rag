@@ -1,0 +1,4 @@
+[server]
+# Avoid Streamlit watcher scanning lazy transformer modules that trigger optional
+# vision imports during path inspection.
+fileWatcherType = "none"
