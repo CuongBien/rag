@@ -1,10 +1,13 @@
-# Cài đặt thư viện tạo PDF: pip install fpdf
+# Sample PDF generator (fpdf). Install: pip install fpdf
 from fpdf import FPDF
 
+
 class PDF(FPDF):
-    def header(self):
-        self.set_font('Arial', 'B', 12)
-        self.cell(0, 10, 'Bao cao Chien luoc Tap doan Alpha 2024', 0, 1, 'C')
+    def header(self) -> None:
+        self.set_font("Arial", "B", 12)
+        # cell(w, h, text, border, ln, align): full-width title row, centered.
+        self.cell(0, 10, "Bao cao Chien luoc Tap doan Alpha 2024", 0, 1, "C")
+
 
 pdf = PDF()
 pdf.add_page()
@@ -25,7 +28,8 @@ content = [
 ]
 
 for line in content:
+    # cell width 200 (page units), height 10, newline after each line.
     pdf.cell(200, 10, txt=line, ln=True)
 
-pdf.output("strategic_report.pdf")
+pdf.output("strategic_report.pdf")  # output path for the generated PDF file
 print("Da tao file strategic_report.pdf thanh cong!")

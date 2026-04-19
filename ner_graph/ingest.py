@@ -5,6 +5,7 @@ from llama_index.core import Document
 
 
 def load_documents_from_data_dir(data_dir: str) -> list[Document]:
+    # data_dir: folder recursively scanned for *.pdf; each file becomes one Document.
     print(f"[ingest] Reading documents from: {data_dir}")
     documents: list[Document] = []
     for pdf_path in pathlib.Path(data_dir).glob("**/*.pdf"):

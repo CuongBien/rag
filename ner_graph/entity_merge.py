@@ -38,6 +38,7 @@ STOP_WORDS: frozenset[str] = frozenset(
 
 
 def normalize_name(name: str) -> str:
+    # name: raw entity label string from Neo4j (lowercase, strip punctuation for matching).
     lowered = name.lower().strip()
     folded = unicodedata.normalize("NFKD", lowered)
     folded = "".join(ch for ch in folded if not unicodedata.combining(ch))
@@ -46,10 +47,12 @@ def normalize_name(name: str) -> str:
 
 
 def _meaningful_tokens(name: str) -> set[str]:
+    # name: entity string; returns content words after stop-word removal.
     return {token for token in normalize_name(name).split() if token not in STOP_WORDS}
 
 
 def _candidate_similarity(left_name: str, right_name: str) -> float:
+    # left_name/right_name: two entity labels; score in [0,1] for blocking candidate pairs.
     left_tokens = _meaningful_tokens(left_name)
     right_tokens = _meaningful_tokens(right_name)
     union = left_tokens | right_tokens
@@ -63,6 +66,7 @@ def _candidate_similarity(left_name: str, right_name: str) -> float:
 
 
 def _blocking_key(name: str) -> str:
+    # name: entity label; coarse bucket key to reduce O(n^2) comparisons.
     tokens = sorted(_meaningful_tokens(name))
     if len(tokens) > 0:
         return tokens[0]
@@ -70,6 +74,7 @@ def _blocking_key(name: str) -> str:
 
 
 def _get_entity_rows(graph_store: Neo4jPropertyGraphStore) -> list[dict[str, str | int]]:
+    # graph_store: source for __Entity__ id + name rows (list names coerced to string).
     raw_rows = graph_store.structured_query(
         """
         MATCH (n:`__Entity__`)
@@ -96,6 +101,12 @@ def merge_similar_entities(
     similarity_threshold: float,
     max_llm_checks: int,
 ) -> int:
+    """
+    graph_store: Neo4j store to read entities and apply apoc.refactor.mergeNodes.
+    llm: used for YES/NO same-entity decisions on fuzzy candidates.
+    similarity_threshold: minimum _candidate_similarity to enqueue an LLM check (also see MERGE_* env).
+    max_llm_checks: stop after this many LLM comparisons (cost control).
+    """
     if similarity_threshold <= 0.0 or similarity_threshold > 1.0:
         raise RuntimeError(
             f"similarity_threshold must be in (0, 1], got {similarity_threshold}"
