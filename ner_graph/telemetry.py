@@ -33,20 +33,46 @@ def setup_phoenix_tracing() -> None:
     project_name = os.getenv("PHOENIX_PROJECT_NAME", "ner-graph-rag")
     collector_endpoint = os.getenv("PHOENIX_COLLECTOR_ENDPOINT")
     api_key = os.getenv("PHOENIX_API_KEY")
+    collector_protocol = os.getenv("PHOENIX_COLLECTOR_PROTOCOL", "grpc")
+    local_host = os.getenv("PHOENIX_HOST", "127.0.0.1")
+    local_port_raw = os.getenv("PHOENIX_PORT")
+    local_port = (
+        int(local_port_raw)
+        if local_port_raw is not None and local_port_raw.strip() != ""
+        else None
+    )
+    local_launch_ok = False
 
     # Keep local launch opt-in to avoid unicode-print issues in some Windows terminals.
     if _to_bool(os.getenv("PHOENIX_LAUNCH_LOCAL", "false")):
-        host = os.getenv("PHOENIX_HOST")
-        port_raw = os.getenv("PHOENIX_PORT")
-        port = int(port_raw) if port_raw is not None and port_raw.strip() != "" else None
-        print(f"[telemetry] Launching Phoenix UI host={host!r} port={port!r}")
+        print(
+            f"[telemetry] Launching Phoenix UI host={local_host!r} "
+            f"port={local_port!r}"
+        )
         try:
-            px.launch_app(host=host, port=port, run_in_thread=True)
+            px.launch_app(
+                host=local_host,
+                port=local_port,
+                run_in_thread=True,
+                use_temp_dir=False,
+            )
+            local_launch_ok = True
         except RuntimeError as exc:
             print(
                 "[telemetry] Phoenix UI launch failed; continuing without local UI. "
                 f"error={exc}"
             )
+        # Phoenix local UI includes an OTLP gRPC collector at 4317.
+        if (collector_endpoint is None or collector_endpoint.strip() == "") and local_launch_ok:
+            collector_endpoint = "http://127.0.0.1:4317"
+            collector_protocol = "grpc"
+
+    if collector_endpoint is None or collector_endpoint.strip() == "":
+        print(
+            "[telemetry] No collector endpoint configured; skipping tracing export. "
+            "Set PHOENIX_COLLECTOR_ENDPOINT or enable local launch."
+        )
+        return
 
     headers: dict[str, str] | None = None
     if api_key is not None and api_key.strip() != "":
@@ -58,6 +84,7 @@ def setup_phoenix_tracing() -> None:
             project_name=project_name,
             batch=True,
             headers=headers,
+            protocol=collector_protocol,  # grpc for local 4317 unless overridden
             verbose=True,
             auto_instrument=False,
             api_key=api_key,
