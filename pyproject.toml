@@ -11,4 +11,16 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "fpdf",
     "pymupdf4llm>=1.27.2.2",
+    "llama-index-embeddings-huggingface>=0.6.0",
+    "sentence-transformers>=3.0.0",
+    "torch>=2.6.0,<2.7",
 ]
+
+# CUDA 12.4 wheels (GPU). Without this, uv resolves torch from PyPI as +cpu.
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }

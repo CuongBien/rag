@@ -9,6 +9,7 @@ from llama_index.core.indices.property_graph import (
 )
 
 from .config import load_config
+from .embeddings import create_bge_m3_embed_model
 from .entity_merge import merge_similar_entities
 from .graph_store import create_graph_store, sanitize_entity_names
 from .ingest import load_documents_from_data_dir
@@ -19,6 +20,16 @@ def run_pipeline(project_root: str) -> None:
     config = load_config(project_root)
     llm = create_llm(config.groq_model, config.groq_api_key, config.groq_api_base)
     Settings.llm = llm
+
+    embed_model = create_bge_m3_embed_model(
+        config.embed_model_name,
+        config.embed_batch_size,
+        config.embed_device,
+        True,
+        config.embed_trust_remote_code,
+        True,
+    )
+    Settings.embed_model = embed_model
 
     graph_store = create_graph_store(
         config.neo4j_uri, config.neo4j_username, config.neo4j_password
@@ -32,7 +43,7 @@ def run_pipeline(project_root: str) -> None:
             documents,
             property_graph_store=graph_store,
             show_progress=True,
-            embed_kg_nodes=False,
+            embed_kg_nodes=True,
             kg_extractors=[
                 SimpleLLMPathExtractor(
                     llm=llm,
