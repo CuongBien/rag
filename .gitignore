@@ -9,3 +9,15 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Cache & Data
+chem_cache.json
+data_vector/
+chroma_db/
+MolT5_model/
+scratch/
+processed_files.json
+run_phoenix.txt
+*.csv
+.pytest_cache/
+**/__pycache__/
