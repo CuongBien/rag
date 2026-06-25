@@ -18,6 +18,15 @@ dependencies = [
     "streamlit>=1.56.0",
     "arize-phoenix>=14.8.0",
     "openinference-instrumentation-llama-index>=4.3.9",
+    "chromadb>=1.5.9",
+    "wikipedia>=1.4.0",
+    "llama-index-vector-stores-chroma>=0.5.5",
+    "tenacity>=9.1.4",
+    "pydantic>=2.12.5",
+    "llama-index-llms-gemini>=0.6.2",
+    "rdkit>=2026.3.2",
+    "fastapi>=0.136.0",
+    "uvicorn>=0.44.0",
 ]
 
 # CUDA 12.4 wheels (GPU). Without this, uv resolves torch from PyPI as +cpu.
