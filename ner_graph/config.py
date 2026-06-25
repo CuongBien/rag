@@ -9,6 +9,8 @@ class AppConfig:
     groq_api_key: str  # Secret for Groq chat-completions (OpenAI-compatible API).
     groq_model: str  # Model id on Groq (e.g. llama-3.3-70b-versatile).
     groq_api_base: str  # Base URL for the OpenAI-compatible client (Groq endpoint).
+    gemini_api_key: str | None # Secret for Gemini
+    gemini_model: str # Model id on Gemini
     neo4j_uri: str  # Bolt URI for Neo4j (host/port).
     neo4j_username: str  # Neo4j database user.
     neo4j_password: str  # Neo4j database password.
@@ -34,18 +36,23 @@ def _require_non_empty_env(name: str) -> str:
 
 def load_config(project_root: str) -> AppConfig:
     # project_root: repository root; used to resolve data_dir = project_root/data.
-    load_dotenv()
+    dotenv_path = os.path.join(project_root, ".env")
+    load_dotenv(dotenv_path, override=True)
     print("[config] Loading environment variables...")
 
     groq_api_key = _require_non_empty_env("GROQ_API_KEY")
-    groq_model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+    groq_model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
     groq_api_base = "https://api.groq.com/openai/v1"
+    
+    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    gemini_model = os.getenv("GEMINI_MODEL", "models/gemini-2.5-flash-lite")
+    
     neo4j_uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     neo4j_username = os.getenv("NEO4J_USERNAME", "neo4j")
     neo4j_password = _require_non_empty_env("NEO4J_PASSWORD")
     merge_similarity_threshold = float(os.getenv("MERGE_SIMILARITY_THRESHOLD", "0.6"))
     merge_max_llm_checks = int(os.getenv("MERGE_MAX_LLM_CHECKS", "50"))
-    data_dir = os.path.join(project_root, "data")
+    data_dir = os.path.join(project_root, "data_vector")
     embed_model_name = os.getenv("EMBED_MODEL_NAME", "BAAI/bge-m3")
     embed_batch_size = int(os.getenv("EMBED_BATCH_SIZE", "8"))
     embed_device_raw = os.getenv("EMBED_DEVICE")
@@ -69,6 +76,8 @@ def load_config(project_root: str) -> AppConfig:
         groq_api_key=groq_api_key,
         groq_model=groq_model,
         groq_api_base=groq_api_base,
+        gemini_api_key=gemini_api_key,
+        gemini_model=gemini_model,
         neo4j_uri=neo4j_uri,
         neo4j_username=neo4j_username,
         neo4j_password=neo4j_password,
