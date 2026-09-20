@@ -1,6 +1,37 @@
 ================================================================================
-OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR LOPERAMIDE (Brand: Loperamide Hydrochloride)
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR LOPERAMIDE (Brand: Loperamide Hydrochloride, LOPERAMIDE HYDROCHLORIDE)
 Source: openFDA (U.S. Food and Drug Administration)
 ================================================================================
 
-No explicit food, fruit juice, beverage, or dietary interaction warnings found in FDA label.
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+Avoid loperamide hydrochloride capsules dosages higher than recommended in adult or pediatric patients 2 years of age and older due to the risk of serious cardiac adverse reactions (see WARNINGS , OVERDOSAGE ). (1 capsule = 2 mg) Patients should receive appropriate fluid and electrolyte replacement as needed. Acute Diarrhea Adults and Pediatric Patients 13 Years and Older: The recommended initial dose is 4 mg (two capsules) followed by 2 mg (one capsule) after each unformed stool. The maximum daily dose is 16 mg (eight capsules).
+
+### [FDA SECTION: WARNINGS]
+patients with risk factors for QT prolongation, including patients with congenital long QT syndrome, with a history of cardiac arrhythmias or other cardiac conditions, elderly patients and those with electrolyte abnormalities. Dehydration Fluid and electrolyte depletion often occur in patients who have diarrhea. In such cases, administration of appropriate fluid and electrolytes is very important. The use of loperamide hydrochloride capsules does not preclude the need for appropriate fluid and electrolyte therapy. Gastrointestinal Disorders In general, loperamide hydrochloride capsules should not be used when inhibition of peristalsis is to be avoided due to the possible risk of significant sequelae including ileus, megacolon and toxic megacolon. Loperamide hydrochloride capsules must be discontinued promptly when constipation, abdominal distention or ileus develop.
+
+### [FDA SECTION: WARNINGS]
+Variability in Pediatric Response Loperamide hydrochloride capsules should be used with special caution in pediatric patients because of the greater variability of response in this age group. Dehydration, particularly in pediatric patients less than 6 years of age, may further influence the variability of response to loperamide hydrochloride capsules. Loperamide hydrochloride capsules are contraindicated in pediatric patients less than 2 years of age due to the risks of respiratory depression and serious cardiac adverse reactions.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+CLINICAL PHARMACOLOGY Mechanism of Action In vitro and animal studies show that loperamide hydrochloride capsules act by slowing intestinal motility and by affecting water and electrolyte movement through the bowel. Loperamide binds to the opiate receptor in the gut wall. Consequently, it inhibits the release of acetylcholine and prostaglandins, thereby reducing propulsive peristalsis, and increasing intestinal transit time.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Pharmacodynamics Loperamide prolongs the transit time of the intestinal contents. It reduces daily fecal volume, increases the viscosity and bulk density, and diminishes the loss of fluid and electrolytes. Tolerance to the antidiarrheal effect has not been observed. Pharmacokinetics Absorption Plasma concentrations of unchanged drug remain below 2 ng/mL after the intake of a 2 mg capsule of loperamide hydrochloride.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+Avoid loperamide hydrochloride capsule dosages higher than recommended in adult or pediatric patients 2 years of age and older due to the risk of serious cardiac adverse reactions (See WARNINGS , OVERDOSAGE ). (1 capsule = 2 mg) Patients should receive appropriate fluid and electrolyte replacement as needed. Acute Diarrhea Adults and Pediatric Patients 13 Years and Older: The recommended initial dose is 4 mg (two capsules) followed by 2 mg (one capsule) after each unformed stool. The maximum daily dose is 16 mg (eight capsules).
+
+### [FDA SECTION: WARNINGS]
+Avoid loperamide hydrochloride dosages higher than recommended in adults and pediatric patients 2 years of age and older due to the risk of serious cardiac adverse reactions (see DOSAGE AND ADMINISTRATION , OVERDOSAGE ) Avoid loperamide hydrochloride in: combination with others drugs or herbal products that are known to prolong the QT interval, including Class 1A (e.g., quinidine, procainamide) or Class III (e.g., amiodarone, sotalol) antiarrhythmics, antipsychotics (e.g., chlorpromazine, haloperidol, thioridazine, ziprasidone), antibiotics (e.g., moxifloxacin), or any other drug known to prolong the QT interval (e.g., pentamidine, levomethadyl acetate, methadone) patients with risk factors for QT prolongation, including patients with congenital long QT syndrome, with a history of cardiac arrhythmias or other cardiac conditions, elderly patients and those with electrolyte abnormalities. Dehydration Fluid and electrolyte depletion often occur in patients who have diarrhea. In such cases, administration of appropriate fluid and electrolytes is very important. The use of loperamide hydrochloride does not preclude the need for appropriate fluid and electrolyte therapy. Gastrointestinal Disorders In general, loperamide hydrochloride should not be used when inhibition of peristalsis is to be avoided due to the possible risk of significant sequelae including ileus, megacolon and toxic megacolon. Loperamide hydrochloride must be discontinued promptly when constipation, abdominal distention or ileus develop.
+
+### [FDA SECTION: WARNINGS]
+Variability in Pediatric Response Loperamide hydrochloride should be used with special caution in pediatric patients because of the greater variability of response in this age group. Dehydration, particularly in pediatric patients less than 6 years of age, may further influence the variability of response to loperamide hydrochloride. Loperamide hydrochloride is contraindicated in pediatric patients less than 2 years of age due to the risks of respiratory depression and serious cardiac adverse reactions.
+
+### [FDA SECTION: PRECAUTIONS]
+Nonteratogenic Effects In a peri- and post-natal development study in rats, oral administration of 40 mg/kg/day produced impairment of growth and survival of offspring. Nursing Mothers Small amounts of loperamide may appear in human breast milk. Therefore, loperamide hydrochloride is not recommended during breast-feeding. Pediatric Use Loperamide hydrochloride is contraindicated in pediatric patients less than 2 years of age due to the risks of respiratory depression and serious cardiac adverse reactions (see CONTRAINDICATIONS ).
+
+### [FDA SECTION: PRECAUTIONS]
+Loperamide hydrochloride should be used with special caution in pediatric patients because of their greater variability of response (see WARNINGS ). Dehydration, particularly in pediatric patients less than 6 years of age, may further influence the variability of response to loperamide hydrochloride. The safety and effectiveness of loperamide hydrochloride in pediatric patients with chronic diarrhea have not been established. Although loperamide hydrochloride has been studied in a limited number of pediatric patients with chronic diarrhea; the therapeutic dose for the treatment of chronic diarrhea in a pediatric population has not been established.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+CLINICAL PHARMACOLOGY Mechanism of Action In vitro and animal studies show that loperamide hydrochloride acts by slowing intestinal motility and by affecting water and electrolyte movement through the bowel. Loperamide binds to the opiate receptor in the gut wall. Consequently, it inhibits the release of acetylcholine and prostaglandins, thereby reducing propulsive peristalsis, and increasing intestinal transit time.

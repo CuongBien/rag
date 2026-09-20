@@ -65,7 +65,8 @@ FOOD_KEYWORDS = [
     r"\bmilk\b", r"\bdairy\b", r"\byogurt\b", r"\bcheese\b", r"\bcalcium\b", r"\biron\b",
     r"\bvitamin k\b", r"\btyramine\b", r"\bcoffee\b", r"\bcaffeine\b", r"\btea\b",
     r"\bhigh-fat\b", r"\blow-fat\b", r"\bsalt substitute\b", r"\bpotassium\b", r"\bsodium intake\b",
-    r"\bdietary\b", r"\bchelation\b", r"\bmultivalent cations\b", r"\beating\b", r"\beat\b"
+    r"\bdietary\b", r"\bchelation\b", r"\bmultivalent cations\b", r"\beating\b", r"\beat\b",
+    r"\bfluids?\b", r"\bwater\b", r"\bhydration\b", r"\bdehydration\b"
 ]
 FOOD_REGEX = re.compile("|".join(FOOD_KEYWORDS), re.IGNORECASE)
 
@@ -88,8 +89,8 @@ SECTIONS_TO_CHECK = [
     "pharmacokinetics"
 ]
 
-def fetch_openfda_label(drug_name: str) -> dict:
-    """Gọi API openFDA để lấy nhãn thuốc chính thức (ưu tiên nhãn kê đơn có drug_interactions, rồi đến nhãn OTC)"""
+def fetch_openfda_labels(drug_name: str) -> list:
+    """Gọi API openFDA để lấy danh sách các nhãn thuốc chính thức phong phú nhất"""
     search_name = drug_name.strip().lower()
     search_name = USAN_ALIASES.get(search_name, search_name)
     
@@ -101,9 +102,10 @@ def fetch_openfda_label(drug_name: str) -> dict:
         f'openfda.substance_name:"{search_name}"'
     ]
     
+    all_results = []
     for q in queries:
         encoded_q = urllib.parse.quote(q)
-        url = f"https://api.fda.gov/drug/label.json?search={encoded_q}&limit=1"
+        url = f"https://api.fda.gov/drug/label.json?search={encoded_q}&limit=3"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
         try:
             with urllib.request.urlopen(req, context=SSL_CTX, timeout=9) as resp:
@@ -111,10 +113,12 @@ def fetch_openfda_label(drug_name: str) -> dict:
                     res_json = json.loads(resp.read().decode("utf-8"))
                     results = res_json.get("results", [])
                     if results:
-                        return results[0]
+                        all_results.extend(results)
+                        if len(all_results) >= 2:
+                            break
         except Exception:
             continue
-    return None
+    return all_results
 
 def extract_food_interaction_blocks(label: dict, drug_name: str) -> list:
     """Bóc tách các khối văn bản nguyên văn của FDA có chứa thông tin về thức ăn/đồ uống"""
@@ -196,17 +200,29 @@ def process_drug(drug_name: str, force: bool = False) -> str:
     if not force and os.path.exists(file_path) and os.path.getsize(file_path) > 80:
         return "EXISTS"
         
-    label = fetch_openfda_label(drug_name)
-    if not label:
+    labels = fetch_openfda_labels(drug_name)
+    if not labels:
         content = f"OFFICIAL FDA LABEL FOR {drug_name.upper()}:\n[WARNING] Không tìm thấy nhãn FDA phù hợp trên openFDA API."
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(content)
         return "NOT_FOUND"
         
-    blocks = extract_food_interaction_blocks(label, drug_name)
+    all_blocks = []
+    seen_texts = set()
+    all_brands = []
     
-    brand_names = label.get("openfda", {}).get("brand_name", [])
-    brand_str = f" (Brand: {', '.join(brand_names[:3])})" if brand_names else ""
+    for lbl in labels:
+        for b in lbl.get("openfda", {}).get("brand_name", []):
+            if b not in all_brands:
+                all_brands.append(b)
+        lbl_blocks = extract_food_interaction_blocks(lbl, drug_name)
+        for b in lbl_blocks:
+            snip = b["text"][:120].lower()
+            if snip not in seen_texts:
+                seen_texts.add(snip)
+                all_blocks.append(b)
+                
+    brand_str = f" (Brand: {', '.join(all_brands[:3])})" if all_brands else ""
     
     header = [
         f"================================================================================",
@@ -216,10 +232,10 @@ def process_drug(drug_name: str, force: bool = False) -> str:
         ""
     ]
     
-    if not blocks:
+    if not all_blocks:
         header.append("No explicit food, fruit juice, beverage, or dietary interaction warnings found in FDA label.")
     else:
-        for b in blocks:
+        for b in all_blocks:
             header.append(f"### [FDA SECTION: {b['section']}]")
             header.append(b['text'])
             header.append("")
@@ -228,7 +244,7 @@ def process_drug(drug_name: str, force: bool = False) -> str:
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
         
-    return f"SAVED ({len(blocks)} blocks)"
+    return f"SAVED ({len(all_blocks)} blocks)"
 
 def main():
     parser = argparse.ArgumentParser(description="Tải dữ liệu Food-Drug Interactions từ openFDA cho 54 thuốc.")
