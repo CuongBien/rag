@@ -12,10 +12,6 @@ def get_router_query_engine(project_root: str):
     """
     Khởi tạo và trả về RouterQueryEngine.
     """
-    # Xoá tạm biến môi trường Gemini để hàm create_llm buộc phải chọn Groq
-    if "GEMINI_API_KEY" in os.environ:
-        del os.environ["GEMINI_API_KEY"]
-        
     config = load_config(project_root)
     
     from llama_index.core import Settings

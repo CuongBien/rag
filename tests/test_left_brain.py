@@ -39,7 +39,7 @@ def main():
     
     config = load_config(PROJECT_ROOT)
     graph_store = create_graph_store(
-        config.neo4j_uri, config.neo4j_username, config.neo4j_password
+        config.neo4j_uri, config.neo4j_username, config.neo4j_password, config.neo4j_database
     )
     
     # Test cypher trực tiếp (Ví dụ test Aspirin và Warfarin nếu đã được crawl)

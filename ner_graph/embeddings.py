@@ -12,22 +12,34 @@ def resolve_embedding_device(requested: str | None) -> str:
     """
     Map EMBED_DEVICE to a device string safe for the installed PyTorch build.
     CPU-only wheels cannot use cuda even if .env says cuda.
+    Also falls back to cpu if device capability is incompatible with installed kernels.
 
     requested: value from EMBED_DEVICE, or None to auto-pick cuda if available else cpu.
     """
+    def _is_cuda_usable(dev: str) -> bool:
+        if not torch.cuda.is_available():
+            return False
+        try:
+            torch.zeros(1, device=dev)
+            return True
+        except Exception as exc:
+            print(
+                f"[embed] CUDA device {dev!r} kernel test failed ({exc}); falling back to cpu."
+            )
+            return False
+
     if requested is not None and requested.strip() != "":
         raw = requested.strip()
         lower = raw.lower()
         if lower == "cuda" or lower.startswith("cuda:"):
-            if not torch.cuda.is_available():
+            if not _is_cuda_usable(raw):
                 print(
-                    "[embed] EMBED_DEVICE requests CUDA but torch.cuda.is_available() is False; "
-                    "using cpu. For GPU, install a CUDA-enabled PyTorch build from pytorch.org."
+                    f"[embed] EMBED_DEVICE requests {raw} but CUDA is not usable with this PyTorch build; using cpu."
                 )
                 return "cpu"
             return raw
         return raw
-    if torch.cuda.is_available():
+    if _is_cuda_usable("cuda"):
         return "cuda"
     return "cpu"
 

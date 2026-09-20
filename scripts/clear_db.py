@@ -16,7 +16,7 @@ def clear_database():
     
     query = "MATCH (n) DETACH DELETE n;"
     
-    with driver.session() as session:
+    with driver.session(database=config.neo4j_database) as session:
         session.run(query)
         print("Đã xóa sạch toàn bộ Data và Node trong Neo4j!")
         

@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 
 @dataclass(frozen=True)
 class AppConfig:
+    llm_provider: str  # "ollama", "groq", or "gemini"
+    ollama_model: str  # Model tag in Ollama (e.g. qwen3:8b, qwen2.5:7b)
+    ollama_base_url: str  # Base URL for Ollama OpenAI-compatible endpoint
     groq_api_key: str  # Secret for Groq chat-completions (OpenAI-compatible API).
     groq_model: str  # Model id on Groq (e.g. llama-3.3-70b-versatile).
     groq_api_base: str  # Base URL for the OpenAI-compatible client (Groq endpoint).
@@ -41,8 +44,12 @@ def load_config(project_root: str) -> AppConfig:
     load_dotenv(dotenv_path, override=True)
     print("[config] Loading environment variables...")
 
-    groq_api_key = _require_non_empty_env("GROQ_API_KEY")
-    groq_model = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+    llm_provider = os.getenv("LLM_PROVIDER", "ollama").lower()
+    ollama_model = os.getenv("OLLAMA_MODEL", "qwen3:8b")
+    ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+
+    groq_api_key = os.getenv("GROQ_API_KEY", "")
+    groq_model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
     groq_api_base = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
     
     gemini_api_key = os.getenv("GEMINI_API_KEY")
@@ -50,11 +57,17 @@ def load_config(project_root: str) -> AppConfig:
     
     neo4j_uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     neo4j_username = os.getenv("NEO4J_USERNAME", "neo4j")
-    neo4j_password = _require_non_empty_env("NEO4J_PASSWORD")
+    neo4j_password = os.getenv("NEO4J_PASSWORD", "")
     neo4j_database = os.getenv("NEO4J_DATABASE", "neo4j")
     merge_similarity_threshold = float(os.getenv("MERGE_SIMILARITY_THRESHOLD", "0.6"))
     merge_max_llm_checks = int(os.getenv("MERGE_MAX_LLM_CHECKS", "50"))
-    data_dir = os.path.join(project_root, "data_vector")
+    custom_data_dir = os.getenv("DATA_DIR")
+    if custom_data_dir:
+        data_dir = os.path.join(project_root, custom_data_dir) if not os.path.isabs(custom_data_dir) else custom_data_dir
+    elif os.path.exists(os.path.join(project_root, "data_vector")) and any(os.scandir(os.path.join(project_root, "data_vector"))):
+        data_dir = os.path.join(project_root, "data_vector")
+    else:
+        data_dir = os.path.join(project_root, "data")
     embed_model_name = os.getenv("EMBED_MODEL_NAME", "BAAI/bge-m3")
     embed_batch_size = int(os.getenv("EMBED_BATCH_SIZE", "8"))
     embed_device_raw = os.getenv("EMBED_DEVICE")
@@ -75,6 +88,9 @@ def load_config(project_root: str) -> AppConfig:
         raise RuntimeError("PG_REL_MAP_LIMIT must be >= 1")
 
     return AppConfig(
+        llm_provider=llm_provider,
+        ollama_model=ollama_model,
+        ollama_base_url=ollama_base_url,
         groq_api_key=groq_api_key,
         groq_model=groq_model,
         groq_api_base=groq_api_base,
