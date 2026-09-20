@@ -1,0 +1,13 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR ACICLOVIR (Brand: Acyclovir)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: PRECAUTIONS]
+Acyclovir should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus. Nursing Mothers: Acyclovir concentrations have been documented in breast milk in 2 women following oral administration of acyclovir and ranged from 0.6 to 4.1 times corresponding plasma levels. These concentrations would potentially expose the nursing infant to a dose of acyclovir up to 0.3 mg/kg/day. Acyclovir should be administered to a nursing mother with caution and only when indicated.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+The decrease in bioavailability is a function of the dose and not the dosage form. There was no effect of food on the absorption of acyclovir (n = 6); therefore, acyclovir capsules may be administered with or without food. The only known urinary metabolite is 9-[(carboxymethoxy)methyl]guanine. Special Populations: Adults with Impaired Renal Function: The half-life and total body clearance of acyclovir are dependent on renal function.
+
+### [FDA SECTION: PHARMACOKINETICS]
+The decrease in bioavailability is a function of the dose and not the dosage form. There was no effect of food on the absorption of acyclovir (n = 6); therefore, acyclovir capsules may be administered with or without food. The only known urinary metabolite is 9-[(carboxymethoxy)methyl]guanine. Special Populations: Adults with Impaired Renal Function: The half-life and total body clearance of acyclovir are dependent on renal function.

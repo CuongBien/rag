@@ -1,0 +1,22 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR CLOPIDOGREL (Brand: Clopidogrel)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DRUG INTERACTIONS]
+Avoid concomitant use of repaglinide with clopidogrel. If concomitant use cannot be avoided, initiate repaglinide at 0.5 mg before each meal and do not exceed a total daily dose of 4 mg. Increased frequency of glucose monitoring may be required during concomitant use.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Clopidogrel tablets are a blood thinner medicine that lowers the chance of blood clots forming in your body. While you take clopidogrel tablets: you may bruise and bleed more easily you are more likely to have nose bleeds it will take longer for any bleeding to stop Call your doctor right away if you have any of these signs or symptoms of bleeding: unexpected bleeding or bleeding that lasts a long time blood in your urine (pink, red or brown urine) red or black stools (looks like tar) bruises that happen without a known cause or get larger cough up blood or blood clots vomit blood or your vomit looks like coffee grounds Do not stop taking clopidogrel tablets without talking to the doctor who prescribes them for you. People who stop taking clopidogrel tablets too soon have a higher risk of having a heart attack or dying. If you must stop clopidogrel tablets because of bleeding, your risk of a heart attack may be higher.
+
+### [FDA SECTION: SPL MEDGUIDE]
+are breastfeeding or plan to breastfeed. It is not known if clopidogrel passes into your breast milk. A decision should be made with your healthcare provider to avoid or discontinue breastfeeding when continuing clopidogrel tablets is needed. have had an allergy or reaction to any medicine used to treat your disease.
+
+### [FDA SECTION: SPL MEDGUIDE]
+What are the ingredients in clopidogrel tablets? Active ingredient: clopidogrel bisulfate Inactive ingredients: crospovidone, hydrogenated castor oil, hydroxypropyl cellulose low substituted, hypromellose 15cP, iron oxide red, lactose monohydrate, mannitol, microcrystalline cellulose, polyethylene glycol 6000, titanium dioxide, and triacetin This Medication Guide has been approved by the U.S. Food and Drug Administration. All trademarks are property of their respective owners. Distributed by: Aurobindo Pharma USA, Inc.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Absorption is at least 50%, based on urinary excretion of clopidogrel metabolites. Effect of food Clopidogrel can be administered with or without food. In a study in healthy male subjects when clopidogrel 75 mg per day was given with a standard breakfast, mean inhibition of ADP-induced platelet aggregation was reduced by less than 9%. The active metabolite AUC 0-24 was unchanged in the presence of food, while there was a 57% decrease in active metabolite C max . Similar results were observed when a clopidogrel 300 mg loading dose was administered with a high-fat breakfast. Metabolism Clopidogrel is extensively metabolized by two main metabolic pathways: one mediated by esterases and leading to hydrolysis into an inactive carboxylic acid derivative (85% of circulating metabolites) and one mediated by multiple cytochrome P450 enzymes. Cytochromes first oxidize clopidogrel to a 2-oxo-clopidogrel intermediate metabolite.
+
+### [FDA SECTION: PHARMACOKINETICS]
+Absorption is at least 50%, based on urinary excretion of clopidogrel metabolites. Effect of food Clopidogrel can be administered with or without food. In a study in healthy male subjects when clopidogrel 75 mg per day was given with a standard breakfast, mean inhibition of ADP-induced platelet aggregation was reduced by less than 9%. The active metabolite AUC 0-24 was unchanged in the presence of food, while there was a 57% decrease in active metabolite C max . Similar results were observed when a clopidogrel 300 mg loading dose was administered with a high-fat breakfast. Metabolism Clopidogrel is extensively metabolized by two main metabolic pathways: one mediated by esterases and leading to hydrolysis into an inactive carboxylic acid derivative (85% of circulating metabolites) and one mediated by multiple cytochrome P450 enzymes. Cytochromes first oxidize clopidogrel to a 2-oxo-clopidogrel intermediate metabolite.

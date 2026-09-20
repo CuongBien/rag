@@ -1,0 +1,37 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR GLIPIZIDE (Brand: Glipizide)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DRUG INTERACTIONS]
+Certain drugs tend to produce hyperglycemia and may lead to loss of control. These drugs include the thiazides and other diuretics, corticosteroids, phenothiazines, thyroid products, estrogens, oral contraceptives, phenytoin, nicotinic acid, sympathomimetics, calcium channel blocking drugs, and isoniazid. When such drugs are administered to a patient receiving glipizide, the patient should be closely observed for loss of control. When such drugs are withdrawn from a patient receiving glipizide, the patient should be observed closely for hypoglycemia.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+Short-term administration of glipizide may be sufficient during periods of transient loss of control in patients usually controlled well on diet. In general, glipizide should be given approximately 30 minutes before a meal to achieve the greatest reduction in postprandial hyperglycemia. Initial Dose The recommended starting dose is 5 mg, given before breakfast. Geriatric patients or those with liver disease may be started on 2.5 mg.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+The maximum recommended once daily dose is 15 mg. Doses above 15 mg should ordinarily be divided and given before meals of adequate caloric content. The maximum recommended total daily dose is 40 mg. Maintenance Some patients may be effectively controlled on a once-a-day regimen, while others show better response with divided dosing.
+
+### [FDA SECTION: PRECAUTIONS]
+Hypoglycemia may be difficult to recognize in the elderly, and in people who are taking beta-adrenergic blocking drugs. Hypoglycemia is more likely to occur when caloric intake is deficient, after severe or prolonged exercise, when alcohol is ingested, or when more than one glucose-lowering drug is used. Loss of Control of Blood Glucose When a patient stabilized on any diabetic regimen is exposed to stress such as fever, trauma, infection, or surgery, a loss of control may occur. At such times, it may be necessary to discontinue glipizide and administer insulin.
+
+### [FDA SECTION: PRECAUTIONS]
+Information for Patients Patients should be informed of the potential risks and advantages of glipizide and of alternative modes of therapy. They should also be informed about the importance of adhering to dietary instructions, of a regular exercise program, and of regular testing of urine and/or blood glucose. The risks of hypoglycemia, its symptoms and treatment, and conditions that predispose to its development should be explained to patients and responsible family members. Primary and secondary failure should also be explained.
+
+### [FDA SECTION: PRECAUTIONS]
+Caloric restriction and weight loss are essential in the obese diabetic patient. Proper dietary management alone may be effective in controlling the blood glucose and symptoms of hyperglycemia. The importance of regular physical activity should also be stressed, and cardiovascular risk factors should be identified and corrective measures taken where possible. Use of glipizide or other antidiabetic medications must be viewed by both the physician and patient as a treatment in addition to diet and not as a substitution or as a convenient mechanism for avoiding dietary restraint. Furthermore, loss of blood glucose control on diet alone may be transient, thus requiring only short-term administration of glipizide or other antidiabetic medications. Maintenance or discontinuation of glipizide or other antidiabetic medications should be based on clinical judgment using regular clinical and laboratory evaluations.
+
+### [FDA SECTION: PRECAUTIONS]
+Certain drugs tend to produce hyperglycemia and may lead to loss of control. These drugs include the thiazides and other diuretics, corticosteroids, phenothiazines, thyroid products, estrogens, oral contraceptives, phenytoin, nicotinic acid, sympathomimetics, calcium channel blocking drugs, and isoniazid. When such drugs are administered to a patient receiving glipizide, the patient should be closely observed for loss of control. When such drugs are withdrawn from a patient receiving glipizide, the patient should be observed closely for hypoglycemia.
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+Information for Patients Patients should be informed of the potential risks and advantages of glipizide and of alternative modes of therapy. They should also be informed about the importance of adhering to dietary instructions, of a regular exercise program, and of regular testing of urine and/or blood glucose. The risks of hypoglycemia, its symptoms and treatment, and conditions that predispose to its development should be explained to patients and responsible family members. Primary and secondary failure should also be explained.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+The mechanism by which glipizide lowers blood glucose during long-term administration has not been clearly established. In man, stimulation of insulin secretion by glipizide in response to a meal is undoubtedly of major importance. Fasting insulin levels are not elevated even on long-term glipizide administration, but the postprandial insulin response continues to be enhanced after at least 6 months of treatment. The insulinotropic response to a meal occurs within 30 minutes after an oral dose of glipizide in diabetic patients, but elevated insulin levels do not persist beyond the time of the meal challenge. Extrapancreatic effects may play a part in the mechanism of action of oral sulfonylurea hypoglycemic drugs. Blood sugar control persists in some patients for up to 24 hours after a single dose of glipizide, even though plasma levels have declined to a small fraction of peak levels by that time (see Pharmacokinetics below).
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Glipizide does not accumulate in plasma on repeated oral administration. Total absorption and disposition of an oral dose was unaffected by food in normal volunteers, but absorption was delayed by about 40 minutes. Thus, glipizide was more effective when administered about 30 minutes before, rather than with, a test meal in diabetic patients. Protein binding was studied in serum from volunteers who received either oral or intravenous glipizide and found to be 98 to 99% one hour after either route of administration. The apparent volume of distribution of glipizide after intravenous administration was 11 liters, indicative of localization within the extracellular fluid compartment.
+
+### [FDA SECTION: PHARMACOKINETICS]
+Glipizide does not accumulate in plasma on repeated oral administration. Total absorption and disposition of an oral dose was unaffected by food in normal volunteers, but absorption was delayed by about 40 minutes. Thus, glipizide was more effective when administered about 30 minutes before, rather than with, a test meal in diabetic patients. Protein binding was studied in serum from volunteers who received either oral or intravenous glipizide and found to be 98 to 99% one hour after either route of administration. The apparent volume of distribution of glipizide after intravenous administration was 11 liters, indicative of localization within the extracellular fluid compartment.

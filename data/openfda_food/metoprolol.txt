@@ -1,0 +1,25 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR METOPROLOL (Brand: METOPROLOL TARTRATE)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+2 DOSAGE AND ADMINISTRATION • Administer once daily with food or after a meal. Titrate at weekly or longer intervals as needed and tolerated. ( 2 ) • Hypertension: Recommended starting dosage is 100 mg daily, in single or divided doses.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+( 2.3 ) 2.1 Hypertension Individualize the dosage of metoprolol tartrate tablets. Metoprolol tartrate tablets should be taken with or immediately following meals. The usual initial dosage is 100 mg daily in single or divided doses. Adjust dosage at weekly (or longer) intervals until optimum blood pressure reduction is achieved.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+2.2 Angina Pectoris The dosage of metoprolol tartrate tablets should be individualized. Metoprolol tartrate tablets should be taken with or immediately following meals. The usual initial dosage is 100 mg daily, given in two divided doses. Gradually increase the dosage at weekly intervals until optimum clinical response has been obtained or there is a pronounced slowing of the heart rate.
+
+### [FDA SECTION: WARNINGS AND CAUTIONS]
+Chronically administered beta-blocking therapy should not be routinely withdrawn prior to major surgery, however, the impaired ability of the heart to respond to reflex adrenergic stimuli may augment the risks of general anesthesia and surgical procedures. 5.6 Hypoglycemia Beta-blockers may prevent early warning signs of hypoglycemia, such as tachycardia, and increase the risk for severe or prolonged hypoglycemia at any time during treatment, especially in patients with diabetes mellitus or children and patients who are fasting (i.e., surgery, not eating regularly, or are vomiting). If severe hypoglycemia occurs, patients should be instructed to seek emergency treatment. Beta-blockers may mask some of the manifestations of hypoglycemia, particularly tachycardia.
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+17 PATIENT COUNSELING INFORMATION Advise patients to take metoprolol tartrate tablets regularly and continuously, as directed, preferably with or immediately following meals. If a dose is missed, the patient should take only the next scheduled dose (without doubling it). Patients should not interrupt or discontinue metoprolol tartrate tablets without consulting the physician. Advise patients (1) to avoid operating automobiles and machinery or engaging in other tasks requiring alertness until the patient’s response to therapy with metoprolol tartrate tablet has been determined; (2) to contact the physician if any difficulty in breathing occurs; (3) to inform the physician or dentist before any type of surgery that he or she is taking metoprolol tartrate tablets. Inform patients or caregivers that there is a risk of hypoglycemia when metoprolol tartrate tablets are given to patients who are fasting or who are vomiting. Monitor for symptoms of hypoglycemia. Call your doctor for medical advice about side effects.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+About 10% of metoprolol in plasma is bound to serum albumin. Metoprolol is known to cross the placenta and is found in breast milk. Metoprolol is also known to cross the blood brain barrier following oral administration and CSF concentrations close to that observed in plasma have been reported. Metoprolol is not a significant P-glycoprotein substrate.
+
+### [FDA SECTION: PHARMACOKINETICS]
+About 10% of metoprolol in plasma is bound to serum albumin. Metoprolol is known to cross the placenta and is found in breast milk. Metoprolol is also known to cross the blood brain barrier following oral administration and CSF concentrations close to that observed in plasma have been reported. Metoprolol is not a significant P-glycoprotein substrate.

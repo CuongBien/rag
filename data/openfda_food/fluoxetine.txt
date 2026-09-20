@@ -1,0 +1,34 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR FLUOXETINE (Brand: Fluoxetine)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+In the controlled clinical trials of fluoxetine supporting its effectiveness in the treatment of Bulimia Nervosa, patients were administered fixed daily fluoxetine doses of 20 or 60 mg, or placebo [see Clinical Studies (14.3) ] . Only the 60 mg dose was statistically significantly superior to placebo in reducing the frequency of binge-eating and vomiting. Periodically reassess to determine the need for maintenance treatment. 2.4 Panic Disorder Initial Treatment — Initiate treatment with fluoxetine 10 mg/day.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+2.5 Fluoxetine and Olanzapine in Combination: Depressive Episodes Associated with Bipolar I Disorder When using fluoxetine and olanzapine in combination, also refer to the Clinical Studies section of the package insert for Symbyax. Adult — Administer fluoxetine in combination with oral olanzapine once daily in the evening, without regard to meals, generally beginning with 5 mg of oral olanzapine and 20 mg of fluoxetine. Make dosage adjustments, if indicated, according to efficacy and tolerability within dose ranges of fluoxetine 20 to 50 mg and oral olanzapine 5 to 12.5 mg. Antidepressant efficacy was demonstrated with olanzapine and fluoxetine in combination with a dose range of olanzapine 6 to 12 mg and fluoxetine 25 to 50 mg.
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+Patients should be advised to avoid driving a car or operating hazardous machinery until they are reasonably certain that their performance is not affected [see Warnings and Precautions (5.13) ]. 17.10 Use of Concomitant Medications Patients should be advised to inform their physician if they are taking, or plan to take, any prescription medication, including Symbyax, Sarafem, or over-the-counter drugs, including herbal supplements or alcohol. Patients should also be advised to inform their physicians if they plan to discontinue any medications they are taking while on fluoxetine. 17.11 Discontinuation of Treatment Patients should be advised to take fluoxetine exactly as prescribed, and to continue taking fluoxetine as prescribed even after their symptoms improve.
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+Nursing Mothers — Patients should be advised to notify their physician if they intend to breast-feed an infant during therapy. Because fluoxetine is excreted in human milk, nursing while taking fluoxetine is not recommended [see Use in Specific Populations (8.3) ] . Pediatric Use of Fluoxetine — Fluoxetine is approved for use in pediatric patients with MDD and OCD [see Box Warning and Warnings and Precautions (5.1) ] . Limited evidence is available concerning the longer-term effects of fluoxetine on the development and maturation of children and adolescent patients.
+
+### [FDA SECTION: SPL MEDGUIDE]
+are breast-feeding or plan to breast-feed. Some fluoxetine capsules may pass into your breast milk. Talk to your healthcare provider about the best way to feed your baby while taking fluoxetine capsules. Tell your healthcare provider about all the medicines that you take, including prescription and non-prescription medicines, vitamins, and herbal supplements.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Your healthcare provider may need to change the dose of fluoxetine capsules until it is the right dose for you. Fluoxetine capsules may be taken with or without food. If you miss a dose of fluoxetine capsules, take the missed dose as soon as you remember. If it is almost time for the next dose, skip the missed dose and take your next dose at the regular time.
+
+### [FDA SECTION: SPL MEDGUIDE]
+You should not drive, operate heavy machinery, or do other dangerous activities until you know how fluoxetine capsules affects you. Do not drink alcohol while using fluoxetine capsules. What are the possible side effects of fluoxetine capsules? Fluoxetine capsules may cause serious side effects, including: See “What is the most important information I should know about fluoxetine capsules?” Problems with blood sugar control.
+
+### [FDA SECTION: SPL MEDGUIDE]
+In addition, 20 mg capsules also contains D&C Yellow #10 and 10 mg capsules also contains FD&C Yellow #6. The capsules are printed with edible ink containing black iron oxide, potassium hydroxide, propylene glycol, shellac and strong ammonia solution. Symbyax ® and Sarafem ® are registered trademarks of Eli Lilly and Company. Mellaril ® is a registered trademark of Novartis AG Corporation.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+12.3 Pharmacokinetics Systemic Bioavailability — In man, following a single oral 40 mg dose, peak plasma concentrations of fluoxetine from 15 to 55 ng/mL are observed after 6 to 8 hours. Food does not appear to affect the systemic bioavailability of fluoxetine, although it may delay its absorption by 1 to 2 hours, which is probably not clinically significant. Thus, fluoxetine may be administered with or without food. Protein Binding — Over the concentration range from 200 to 1000 ng/mL, approximately 94.5% of fluoxetine is bound in vitro to human serum proteins, including albumin and α 1 -glycoprotein. The interaction between fluoxetine and other highly protein-bound drugs has not been fully evaluated, but may be important.
+
+### [FDA SECTION: PHARMACOKINETICS]
+12.3 Pharmacokinetics Systemic Bioavailability — In man, following a single oral 40 mg dose, peak plasma concentrations of fluoxetine from 15 to 55 ng/mL are observed after 6 to 8 hours. Food does not appear to affect the systemic bioavailability of fluoxetine, although it may delay its absorption by 1 to 2 hours, which is probably not clinically significant. Thus, fluoxetine may be administered with or without food. Protein Binding — Over the concentration range from 200 to 1000 ng/mL, approximately 94.5% of fluoxetine is bound in vitro to human serum proteins, including albumin and α 1 -glycoprotein. The interaction between fluoxetine and other highly protein-bound drugs has not been fully evaluated, but may be important.

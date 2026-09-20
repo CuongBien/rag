@@ -1,0 +1,19 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR AMITRIPTYLINE (Brand: Amitriptyline Hydrochloride)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DRUG INTERACTIONS]
+Monoamine oxidase inhibitors – see CONTRAINDICATIONS section. Guanethidine or similarly acting compounds; thyroid medication; alcohol, barbiturates and other CNS depressants; and disulfiram – see WARNINGS section. When amitriptyline is given with anticholinergic agents or sympathomimetic drugs, including epinephrine combined with local anesthetics, close supervision and careful adjustment of dosages are required. Hyperpyrexia has been reported when amitriptyline is administered with anticholinergic agents or with neuroleptic drugs, particularly during hot weather.
+
+### [FDA SECTION: WARNINGS]
+Close supervision is required when amitriptyline hydrochloride is given to hyperthyroid patients or those receiving thyroid medication. Amitriptyline may enhance the response to alcohol and the effects of barbiturates and other CNS depressants. In patients who may use alcohol excessively, it should be borne in mind that the potentiation may increase the danger inherent in any suicide attempt or overdosage. Delirium has been reported with concurrent administration of amitriptyline and disulfiram. Angle-Closure Glaucoma The pupillary dilation that occurs following use of many antidepressant drugs including amitriptyline hydrochloride may trigger an angle closure attack in a patient with anatomically narrow angles who does not have a patent iridectomy.
+
+### [FDA SECTION: WARNINGS]
+1 Based on a maximum recommended amitriptyline dose of 150 mg/day or 3 mg/kg/day for a 50 kg patient. Nursing Mothers Amitriptyline is excreted into breast milk. In one report in which a patient received amitriptyline 100 mg/day while nursing her infant, levels of 83 to 141 ng/mL were detected in the mother's serum. Levels of 135 to 151 ng/mL were found in the breast milk, but no trace of the drug could be detected in the infant's serum. Because of the potential for serious adverse reactions in nursing infants from amitriptyline, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother. Usage in Pediatric Patients In view of the lack of experience with the use of this drug in pediatric patients, it is not recommended at the present time for patients under 12 years of age.
+
+### [FDA SECTION: PRECAUTIONS]
+Monoamine oxidase inhibitors – see CONTRAINDICATIONS section. Guanethidine or similarly acting compounds; thyroid medication; alcohol, barbiturates and other CNS depressants; and disulfiram – see WARNINGS section. When amitriptyline is given with anticholinergic agents or sympathomimetic drugs, including epinephrine combined with local anesthetics, close supervision and careful adjustment of dosages are required. Hyperpyrexia has been reported when amitriptyline is administered with anticholinergic agents or with neuroleptic drugs, particularly during hot weather.
+
+### [FDA SECTION: SPL MEDGUIDE]
+This Medication Guide has been approved by the U.S. Food and Drug Administration for all antidepressants.

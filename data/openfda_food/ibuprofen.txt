@@ -1,0 +1,19 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR IBUPROFEN (Brand: Ibuprofen)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+Do not exceed 3200 mg total daily dose. If gastrointestinal complaints occur, administer ibuprofen tablets with meals or milk. Rheumatoid arthritis and osteoarthritis, including flare-ups of chronic disease Suggested Dosage: 1200 mg to 3200 mg daily (300 mg qid; 400 mg, 600 mg or 800 mg tid or qid). Individual patients may show a better response to 3200 mg daily, as compared with 2400 mg, although in well-controlled clinical trials patients on 3200 mg did not show a better mean response in terms of efficacy.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+The smallest dose of ibuprofen tablets that yields acceptable control should be employed. A linear blood level doseresponse relationship exists with single doses up to 800 mg (See CLINICAL PHARMACOLOGY for effects of food on rate of absorption). The availability of three tablet strengths facilitates dosage adjustment. In chronic conditions, a therapeutic response to therapy with ibuprofen tablets is sometimes seen in a few days to a week but most often is observed by two weeks.
+
+### [FDA SECTION: WARNINGS]
+Patients with a prior history of peptic ulcer disease and/or gastrointestinal bleeding who use NSAIDs have a greater than 10-fold increased risk for developing a GI bleed compared to patients treated with neither of these risk factors. Other factors that increase the risk of GI bleeding in patients treated with NSAIDs include concomitant use of oral corticosteroids or anticoagulants, longer duration of NSAID therapy, smoking, use of alcohol, older age, and poor general health status. Most spontaneous reports of fatal GI events are in elderly or debilitated patients and therefore, special care should be taken in treating this population. To minimize the potential risk for an adverse GI event in patients treated with an NSAID, the lowest effective dose should be used for the shortest possible duration.
+
+### [FDA SECTION: PRECAUTIONS]
+The effects of ibuprofen tablets on labor and delivery in pregnant women are unknown. Nursing Mothers It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human-milk and because of the potential for serious adverse reactions in nursing infants from ibuprofen tablets, a decision should be made whether to discontinue nursing or discontinue the drug, taking into account the importance of the drug to the mother. Pediatric Use Safety and effectiveness of ibuprofen tablets in pediatric patients have not been established. Geriatric Use As with any NSAIDs, caution should be exercised in treating the elderly (65 years and older).
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+There is no evidence of drug accumulation or enzyme induction. The administration of ibuprofen tablets either under fasting conditions or immediately before meals yields quite similar serum ibuprofen concentration-time profiles. When ibuprofen tablets are administered immediately after a meal, there is a reduction in the rate of absorption but no appreciable decrease in the extent of absorption. The bioavailability of the drug is minimally altered by the presence of food. A bioavailability study has shown that there was no interference with the absorption of ibuprofen when ibuprofen tablets were given in conjunction with an antacid containing both aluminum hydroxide and magnesium hydroxide. Ibuprofen is rapidly metabolized and eliminated in the urine.

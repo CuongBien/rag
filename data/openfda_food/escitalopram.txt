@@ -1,0 +1,31 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR ESCITALOPRAM (Brand: Escitalopram Oral Solution)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+2 DOSAGE AND ADMINISTRATION Indication and Population Recommended Dosage MDD in Adults ( 2.1 ) Initial: 10 mg once daily Recommended: 10 mg once daily Maximum: 20 mg once daily MDD in Pediatric Patients 12 years and older ( 2.1 ) Initial: 10 mg once daily Recommended: 10 mg once daily Maximum: 20 mg once daily GAD in Adults ( 2.2 ) Initial: 10 mg once daily Recommended: 10 mg once daily Maximum: 20 mg once daily No additional benefits were seen at 20 mg once daily ( 2.1 ) Administer once daily, morning or evening, with or without food ( 2.3 ) Elderly patients: recommended dosage is 10 mg once daily ( 2.4 ) Hepatic impairment: recommended dosage is 10 mg once daily ( 2.4 , 8.6 ) When discontinuing escitalopram, reduce dose gradually whenever possible ( 2.5 ) 2.1 Major Depressive Disorder Adults The recommended dosage of escitalopram in adults is 10 mg once daily. A fixed-dose trial of escitalopram demonstrated the effectiveness of both 10 mg and 20 mg of escitalopram, but failed to demonstrate a greater benefit of 20 mg over 10 mg [ see Clinical Studies (14.1) ]. Depending on clinical response and tolerability, dosage may be increased to the maximum recommended dosage of 20 mg once daily at an interval of no less than 1 week.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+However, due to AbbVie Inc.’s marketing exclusivity rights, this drug product is not labeled with that information. 2.3 Administration Information Administer escitalopram orally once daily, in the morning or evening, with or without food. 2.4 Screen for Bipolar Disorder Prior to Starting Escitalopram Prior to initiating treatment with escitalopram or another antidepressant, screen patients for a personal family history of bipolar disorder, mania, or hypomania [ see Warnings and Precautions (5.5) ]. 2.5 Recommended Dosage for Specific Populations The recommended dosage for most elderly patients and patients with hepatic impairment is 10 mg once daily [ see Use in Specific Populations ( 8.5 , 8.6 ) ].
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+Interference with Psychomotor Performance Because psychoactive drugs may impair judgment, thinking, or motor skills, patients should be cautioned about operating hazardous machinery, including automobiles, until they are reasonably certain that escitalopram therapy does not affect their ability to engage in such activities. Alcohol Patients should be told that, although escitalopram has not been shown in experiments with normal subjects to increase the mental and motor skill impairments caused by alcohol, the concomitant use of escitalopram and alcohol in depressed patients is not advised. Pregnancy Advise pregnant women to notify their healthcare providers if they become pregnant or intend to become pregnant during treatment with escitalopram. Advise patients that escitalopram use later in pregnancy may lead to increased risk for neonatal complications requiring prolonged hospitalization, respiratory support, tube feeding, and/or persistent pulmonary hypertension (PPHN) of the newborn [ see Use in Specific Populations (8.1) ].
+
+### [FDA SECTION: SPL MEDGUIDE]
+are breastfeeding or plan to breastfeed. Escitalopram passes into breast milk and may harm the baby. Talk to your healthcare provider about the best way to feed the baby during treatment with escitalopram oral solution. If you or your child breastfeed during treatment with escitalopram oral solution, call your healthcare provider if the baby develops sleepiness or fussiness, or is not feeding or gaining weight well.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Take escitalopram oral solution 1 time each day, in the morning or the evening. Take escitalopram oral solution with or without food. If you or your child take too much escitalopram oral solution, call your healthcare provider or Poison Help Line at 1-800-222-1222, or go to the nearest hospital emergency room right away. What should I avoid while taking Escitalopram Oral Solution?
+
+### [FDA SECTION: SPL MEDGUIDE]
+Escitalopram oral solution can cause sleepiness or may affect your ability to make decisions, think clearly, or react quickly. Do not drink alcohol during treatment with escitalopram oral solution. What are the possible side effects of Escitalopram Oral Solution? Escitalopram Oral Solution may cause serious side effects, including: See “What is the most important information I should know about Escitalopram Oral Solution?” Serotonin syndrome.
+
+### [FDA SECTION: SPL MEDGUIDE]
+This Medication Guide has been approved by the U.S. Food and Drug Administration. L71634 Rev. 02/2025
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Following a single oral dose (20 mg tablet or solution) of escitalopram, peak blood levels occur at about 5 hours. Absorption of escitalopram is not affected by food. Distribution The binding of escitalopram to human plasma proteins is approximately 56%. The volume of distribution of citalopram is about 12 L/kg.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Coadministration of escitalopram and metoprolol had no clinically significant effects on blood pressure or heart rate. Alcohol Escitalopram did not potentiate the cognitive and motor effects of alcohol in a clinical trial. As with other psychotropic medications, the use of alcohol by patients taking escitalopram is not recommended. Warfarin Administration of 40 mg/day racemic citalopram for 21 days did not affect the pharmacokinetics of warfarin, a CYP3A4 substrate. Prothrombin time was increased by 5%.

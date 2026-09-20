@@ -1,0 +1,31 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR OMEPRAZOLE (Brand: Omeprazole)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: DRUG INTERACTIONS]
+See digoxin prescribing information. Drugs Dependent on Gastric pH for Absorption (e.g., iron salts, erlotinib, dasatinib, nilotinib, mycophenolate mofetil, ketoconazole/itraconazole) Clinical Impact: Omeprazole can reduce the absorption of other drugs due to its effect on reducing intragastric acidity. Intervention: Mycophenolate mofetil (MMF): Co-administration of omeprazole in healthy subjects and in transplant patients receiving MMF has been reported to reduce the exposure to the active metabolite, mycophenolic acid (MPA), possibly due to a decrease in MMF solubility at an increased gastric pH. The clinical relevance of reduced MPA exposure on organ rejection has not been established in transplant patients receiving omeprazole and MMF.
+
+### [FDA SECTION: DOSAGE AND ADMINISTRATION]
+If there is recurrence of EE or GERD symptoms (e.g., heartburn), additional 4 to 8 week courses of omeprazole delayed-release capsules may be considered. 2.3 Administration Instructions • Take omeprazole delayed-release capsules before meals. • Antacids may be used concomitantly with omeprazole delayed-release capsules. • Missed doses: If a dose is missed, administer as soon as possible.
+
+### [FDA SECTION: WARNINGS AND CAUTIONS]
+For patients expected to be on prolonged treatment or who take PPIs with medications such as digoxin or drugs that may cause hypomagnesemia (e.g., diuretics), health care professionals may consider monitoring magnesium levels prior to initiation of PPI treatment and periodically [see Adverse Reactions ( 6.2 )]. Consider monitoring magnesium and calcium levels prior to initiation of omeprazole delayed-release capsules and periodically while on treatment in patients with a preexisting risk of hypocalcemia (e.g., hypoparathyroidism). Supplement with magnesium and/or calcium, as necessary. If hypocalcemia is refractory to treatment, consider discontinuing the PPI. 5.10 Interaction with St John’s Wort or Rifampin Drugs which induce CYP2C19 or CYP3A4 (such as St.
+
+### [FDA SECTION: INFORMATION FOR PATIENTS]
+John’s Wort or rifampin; or, if they take high-dose methotrexate [see Warnings and Precautions ( 5.7 , 5.10 , 5.12 )]. Administration • Take omeprazole delayed-release capsules before meals. • Antacids may be used concomitantly with omeprazole delayed-release capsules. • Missed doses: If a dose is missed, administer as soon as possible.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Omeprazole delayed-release capsules are used in adults: • for up to 8 weeks for the healing of duodenal ulcers. The duodenal area is the area where food passes when it leaves the stomach. • with certain antibiotics for 10 to 14 days to treat an infection caused by bacteria called H. pylori.
+
+### [FDA SECTION: SPL MEDGUIDE]
+What should I tell my doctor before taking omeprazole delayed-release capsules? Before taking omeprazole delayed-release capsules, tell your doctor about all of your medical conditions, including if you: • have low magnesium levels, low calcium levels and low potassium levels in your blood • have liver problems • have any other medical conditions • are pregnant or plan to become pregnant. It is not known if omeprazole delayed-release capsules will harm your unborn baby. • are breastfeeding or plan to breastfeed. Omeprazole passes into your breast milk. Talk to your doctor about the best way to feed your baby if you take omeprazole delayed-release capsules. • Tell your doctor about all of the medicines you take including prescription and over-the-counter medicines, vitamins and herbal supplements.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Your doctor will tell you the time of day to take omeprazole delayed-release capsules, based on your medical condition. • Take omeprazole delayed-release capsules before a meal. • Antacids may be taken with omeprazole delayed-release capsules. Omeprazole Delayed-Release Capsules • Swallow omeprazole delayed-release capsules whole.
+
+### [FDA SECTION: SPL MEDGUIDE]
+Active ingredient in Omeprazole Delayed-Release Capsules: omeprazole Inactive ingredients in omeprazole delayed-release capsules : Glyceryl monostearate, hypromellose (5cps), meglumine, methacrylic acid copolymer, poloxamer, sugar globules, talc, titanium dioxide, and triethyl citrate. The capsule shells have the following inactive ingredients: black iron oxide, D & C Red 28, FD & C Blue 1, FD & C Red 40, gelatin, potassium hydroxide, propylene glycol, shellac, titanium dioxide, and yellow iron oxide. For more information, call 1-888-375-3784. This Medication Guide has been approved by the U.S. Food and Drug Administration. INSTRUCTIONS FOR USE Omeprazole (oh mep' ra zole) Delayed-Release Capsules, USP Taking omeprazole delayed-release capsules with applesauce: 1. Place 1 tablespoon of applesauce into a clean container.
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Omeprazole, given in oral doses of 30 or 40 mg for 2 to 4 weeks, had no effect on thyroid function, carbohydrate metabolism, or circulating levels of parathyroid hormone, cortisol, estradiol, testosterone, prolactin, cholecystokinin or secretin. No effect on gastric emptying of the solid and liquid components of a test meal was demonstrated after a single dose of omeprazole 90 mg. In healthy subjects, a single intravenous dose of omeprazole (0.35 mg/kg) had no effect on intrinsic factor secretion. No systematic dose-dependent effect has been observed on basal or stimulated pepsin output in humans.

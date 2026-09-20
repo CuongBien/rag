@@ -1,0 +1,19 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR METHOTREXATE (Brand: METHOTREXATE)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: WARNINGS AND CAUTIONS]
+The safety of methotrexate in patients with hepatic disease is unknown. The risk of hepatotoxicity is increased with heavy alcohol consumption. In patients with psoriasis, fibrosis or cirrhosis may occur in the absence of symptoms or abnormal liver tests; the risk of hepatotoxicity appears to increase with total cumulative dose and generally occurs after receipt of a total cumulative dose of 1.5 g or more. Monitor liver tests at baseline, periodically during treatment and as clinically indicated.
+
+### [FDA SECTION: SPL PATIENT PACKAGE INSERT]
+See “What is the most important information I should know about methotrexate tablets?” See the end of this leaflet for a complete list of ingredients in methotrexate tablets. Before taking methotrexate tablets tell your healthcare provider about all of your medical conditions, including if you: • have problems swallowing tablets • have kidney problems or are receiving dialysis treatments • have liver problems • drink alcohol-containing beverages and, during treatment with methotrexate tablets, if there are any changes in the amount of alcoholic beverages you drink • have fluid in your stomach-area (ascites) • have lung problems or fluid in your lungs (pleural effusion) • plan to have any surgeries with general anesthesia, including dental surgery • have stomach ulcers (peptic ulcer disease) • have ulcerative colitis • have recently received or are scheduled to receive a vaccine. You should not receive live vaccines during treatment with methotrexate tablets. • are breastfeeding or plan to breastfeed. Methotrexate tablets may pass into your breast milk. Do not breastfeed during treatment and for 1 week after your final dose of methotrexate tablets. Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins and herbal supplements.
+
+### [FDA SECTION: SPL PATIENT PACKAGE INSERT]
+This Patient Information has been approved by the U.S. Food and Drug Administration. Revised: 05/2026
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+Methotrexate may undergo enterohepatic recirculation; however, this pathway has not been fully characterized. Effect of Food Food has been shown to delay absorption and reduce peak concentration. Distribution Methotrexate in serum is approximately 50% protein bound. Methotrexate does not penetrate the blood-cerebrospinal fluid barrier at concentrations achieved with the recommended dosages.
+
+### [FDA SECTION: PHARMACOKINETICS]
+Methotrexate may undergo enterohepatic recirculation; however, this pathway has not been fully characterized. Effect of Food Food has been shown to delay absorption and reduce peak concentration. Distribution Methotrexate in serum is approximately 50% protein bound. Methotrexate does not penetrate the blood-cerebrospinal fluid barrier at concentrations achieved with the recommended dosages.

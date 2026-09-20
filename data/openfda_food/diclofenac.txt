@@ -1,0 +1,19 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR DICLOFENAC (Brand: Diclofenac sodium)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: WARNINGS AND CAUTIONS]
+Risk Factors for GI Bleeding, Ulceration, and Perforation Patients with a prior history of peptic ulcer disease and/or GI bleeding who used NSAIDs had a greater than 10-fold increased risk for developing a GI bleed compared to patients without these risk factors. Other factors that increase the risk of GI bleeding in patients treated with NSAIDs include longer duration of NSAID therapy; concomitant use of oral corticosteroids, aspirin, anticoagulants, or selective serotonin reuptake inhibitors (SSRIs); smoking; use of alcohol; older age; and poor general health status. Most postmarketing reports of fatal GI events occurred in elderly or debilitated patients. Additionally, patients with advanced liver disease and/or coagulopathy are at increased risk for GI bleeding.
+
+### [FDA SECTION: WARNINGS AND CAUTIONS]
+If diclofenac sodium topical solution is used in patients with advanced renal disease, monitor patients for signs of worsening renal function. Hyperkalemia Increases in serum potassium concentration, including hyperkalemia, have been reported with use of NSAIDs, even in some patients without renal impairment. In patients with normal renal function, these effects have been attributed to a hyporeninemic-hypoaldosteronism state. 5.7 Anaphylactic Reactions Diclofenac has been associated with anaphylactic reactions in patients with and without known hypersensitivity to diclofenac and in patients with aspirin-sensitive asthma [ see Contraindications ( 4 ) and Warnings and Precautions ( 5.8 ) ].
+
+### [FDA SECTION: SPL MEDGUIDE]
+You may have an increased risk of another heart attack if you take NSAIDs after a recent heart attack. ● Increased risk of bleeding, ulcers, and tears (perforation) of the esophagus (tube leading from the mouth to the stomach), stomach and intestines: o anytime during use o without warning symptoms o that may cause death The risk of getting an ulcer or bleeding increases with: past history of stomach ulcers, or stomach or intestinal bleeding with use of NSAIDs taking medicines called "corticosteroids", "anticoagulants", "SSRIs", or "SNRIs" increasing doses of NSAIDs longer use of NSAIDs smoking drinking alcohol older age poor health advanced liver disease bleeding problems NSAIDs should only be used: ○ exactly as prescribed ○ at the lowest dose possible for your treatment ○ for the shortest time needed What are NSAIDs? NSAIDs are used to treat pain and redness, swelling, and heat (inflammation) from medical conditions such as different types of arthritis, menstrual cramps, and other types of short-term pain. Who should not take NSAIDs?
+
+### [FDA SECTION: SPL MEDGUIDE]
+This Medication Guide has been approved by the U.S. Food and Drug Administration Revised: 1/2025 Instruction for Use Diclofenac Sodium (dye kloe' fen ak soe' dee um) Topical Solution, 2% Read the Medication Guide that comes with diclofenac sodium topical solution first. Be sure that you read, understand and follow these Instructions for Use before you use diclofenac sodium topical solution for the first time. Important: For use on the skin only (topical).
+
+### [FDA SECTION: SPL MEDGUIDE]
+This Instructions for Use has been approved by the U.S. Food and Drug Administration. The brand names mentioned are registered trademarks of their respective manufacturers. Manufactured for: Alembic Pharmaceuticals, Inc.

@@ -1,0 +1,10 @@
+================================================================================
+OFFICIAL FDA LABEL: FOOD, BEVERAGE & DIETARY INTERACTIONS FOR CEFALEXIN (Brand: Cephalexin)
+Source: openFDA (U.S. Food and Drug Administration)
+================================================================================
+
+### [FDA SECTION: CLINICAL PHARMACOLOGY]
+12 CLINICAL PHARMACOLOGY 12.1 Mechanism of Action Cephalexin is a cephalosporin antibacterial drug [see Microbiology (12.4) ] . 12.3 Pharmacokinetics Absorption: Cephalexin is acid stable and may be given without regard to meals. Following doses of 250 mg, 500 mg, and 1 g, average peak serum levels of approximately 9, 18, and 32 mcg/mL, respectively, were obtained at 1 hour. Serum levels were detectable 6 hours after administration (at a level of detection of 0.2 mcg/mL).
+
+### [FDA SECTION: PHARMACOKINETICS]
+12.3 Pharmacokinetics Absorption: Cephalexin is acid stable and may be given without regard to meals. Following doses of 250 mg, 500 mg, and 1 g, average peak serum levels of approximately 9, 18, and 32 mcg/mL, respectively, were obtained at 1 hour. Serum levels were detectable 6 hours after administration (at a level of detection of 0.2 mcg/mL).
