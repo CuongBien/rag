@@ -86,7 +86,10 @@ def build_knowledge_graph(project_root: str):
     Settings.embed_model = embed_model
 
     graph_store = create_graph_store(
-        config.neo4j_uri, config.neo4j_username, config.neo4j_password
+        config.neo4j_uri,
+        config.neo4j_username,
+        config.neo4j_password,
+        config.neo4j_database,
     )
     
     # 1. Định nghĩa SCHEMA NGHIÊM NGẶT cho Não Trái
@@ -170,7 +173,10 @@ def build_query_engine(project_root: str) -> BaseQueryEngine:
     )
     Settings.embed_model = embed_model
     graph_store = create_graph_store(
-        config.neo4j_uri, config.neo4j_username, config.neo4j_password
+        config.neo4j_uri,
+        config.neo4j_username,
+        config.neo4j_password,
+        config.neo4j_database,
     )
     
     index = PropertyGraphIndex.from_existing(
@@ -195,3 +201,15 @@ def build_query_engine(project_root: str) -> BaseQueryEngine:
 
 def answer_question(query_engine: BaseQueryEngine, question: str) -> str:
     return str(query_engine.query(question))
+
+
+def run_pipeline(project_root: str) -> None:
+    """Xây dựng Knowledge Graph từ dữ liệu và chạy câu hỏi truy vấn mẫu."""
+    print(f"[pipeline] Running Graph RAG pipeline for project_root={project_root}...")
+    build_knowledge_graph(project_root)
+    query_engine = build_query_engine(project_root)
+    question = "Paracetamol có tương tác nguy hiểm nào với Warfarin không?"
+    print(f"\n[pipeline] Question: {question}")
+    answer_text = answer_question(query_engine, question)
+    print(f"\n[pipeline] Answer:\n{answer_text}")
+

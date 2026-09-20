@@ -15,14 +15,18 @@ class SafeNeo4jPropertyGraphStore(Neo4jPropertyGraphStore):
 
 
 def create_graph_store(
-    neo4j_uri: str, neo4j_username: str, neo4j_password: str
+    neo4j_uri: str,
+    neo4j_username: str,
+    neo4j_password: str,
+    neo4j_database: str = "neo4j",
 ) -> SafeNeo4jPropertyGraphStore:
     # neo4j_uri: Bolt/Neo4j URI; neo4j_username/password: DB credentials.
-    print(f"[db] Connecting Neo4j at {neo4j_uri}...")
+    print(f"[db] Connecting Neo4j at {neo4j_uri} (database: {neo4j_database})...")
     return SafeNeo4jPropertyGraphStore(
         username=neo4j_username,
         password=neo4j_password,
         url=neo4j_uri,
+        database=neo4j_database,
         refresh_schema=False,  # skip apoc.meta on connect (faster; fewer type errors)
         enhanced_schema=False,  # lighter schema for prompts
     )

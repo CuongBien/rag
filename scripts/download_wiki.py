@@ -1,8 +1,14 @@
-import wikipedia
+import sys
 import os
 import time
+import wikipedia
+
+# Fix Windows console UTF-8 encoding
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 wikipedia.set_lang("en") 
+wikipedia.set_user_agent("CheminformaticsRAG/1.0 (biencaocuongg@gmail.com)") 
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(PROJECT_ROOT, "data_vector")

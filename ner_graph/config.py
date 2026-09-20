@@ -14,6 +14,7 @@ class AppConfig:
     neo4j_uri: str  # Bolt URI for Neo4j (host/port).
     neo4j_username: str  # Neo4j database user.
     neo4j_password: str  # Neo4j database password.
+    neo4j_database: str  # Neo4j database name (default: neo4j or custom Aura db name).
     merge_similarity_threshold: float  # Min fuzzy score (0–1) to consider entity pairs for LLM merge.
     merge_max_llm_checks: int  # Cap on LLM same-entity checks per run (cost/latency bound).
     data_dir: str  # Directory scanned for **/*.pdf (absolute path under project).
@@ -41,8 +42,8 @@ def load_config(project_root: str) -> AppConfig:
     print("[config] Loading environment variables...")
 
     groq_api_key = _require_non_empty_env("GROQ_API_KEY")
-    groq_model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
-    groq_api_base = "https://api.groq.com/openai/v1"
+    groq_model = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+    groq_api_base = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
     
     gemini_api_key = os.getenv("GEMINI_API_KEY")
     gemini_model = os.getenv("GEMINI_MODEL", "models/gemini-2.5-flash-lite")
@@ -50,6 +51,7 @@ def load_config(project_root: str) -> AppConfig:
     neo4j_uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     neo4j_username = os.getenv("NEO4J_USERNAME", "neo4j")
     neo4j_password = _require_non_empty_env("NEO4J_PASSWORD")
+    neo4j_database = os.getenv("NEO4J_DATABASE", "neo4j")
     merge_similarity_threshold = float(os.getenv("MERGE_SIMILARITY_THRESHOLD", "0.6"))
     merge_max_llm_checks = int(os.getenv("MERGE_MAX_LLM_CHECKS", "50"))
     data_dir = os.path.join(project_root, "data_vector")
@@ -81,6 +83,7 @@ def load_config(project_root: str) -> AppConfig:
         neo4j_uri=neo4j_uri,
         neo4j_username=neo4j_username,
         neo4j_password=neo4j_password,
+        neo4j_database=neo4j_database,
         merge_similarity_threshold=merge_similarity_threshold,
         merge_max_llm_checks=merge_max_llm_checks,
         data_dir=data_dir,
