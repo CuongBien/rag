@@ -18,7 +18,7 @@ Rules:
 3) If context does NOT contain any relevant entity or relationship for the question:
    - Reply politely that the current material does not mention this topic.
    - DO NOT use technical terms such as "node", "do thi", "duong noi", "database".
-   - Prefer this style: "Dua tren bao cao chien luoc nam 2024, hien khong co thong tin ve ..."
+   - Prefer this style: "Dua tren co so du lieu duoc hoc hien tai, khong tim thay thong tin ve ..."
 4) Do NOT output "khong co thong tin truc tiep" when an indirect relationship exists.
 5) Always keep the answer objective, precise, and in natural Vietnamese for end users.
 6) Keep the response concise (2-4 sentences), with clear evidence phrasing when available.
@@ -70,23 +70,47 @@ def create_property_graph_query_engine(
 
 def exact_interaction_query(graph_store, drug_a: str, drug_b: str):
     """
-    Hàm truy vấn chính xác (Não Trái logic) bằng Cypher
-    Không dùng vector similarity, chỉ check cấu trúc rành mạch
+    Hàm truy vấn chính xác (Não Trái logic) bằng Cypher:
+    1. Tìm liên kết trực tiếp giữa 2 chất (kèm properties như severity, clinical_effect, dosage, reason).
+    2. Nếu không có liên kết trực tiếp, tìm liên kết gián tiếp 1-hop qua Enzyme / Transporter / Target chung.
     """
     drug_a = drug_a.lower().strip()
     drug_b = drug_b.lower().strip()
-    query = f"""
-    MATCH (d1 {{name: '{drug_a}'}})-[r]-(d2 {{name: '{drug_b}'}})
-    RETURN type(r) as relation
+
+    # 1. Truy vấn trực tiếp
+    query_direct = f"""
+    MATCH (d1)-[r]-(d2)
+    WHERE (toLower(coalesce(d1.name, d1.id, '')) = '{drug_a}' OR toLower(coalesce(d1.id, d1.name, '')) = '{drug_a}')
+      AND (toLower(coalesce(d2.name, d2.id, '')) = '{drug_b}' OR toLower(coalesce(d2.id, d2.name, '')) = '{drug_b}')
+    RETURN type(r) as relation, properties(r) as props, coalesce(d1.name, d1.id) as s_name, coalesce(d2.name, d2.id) as t_name
     """
     try:
-        results = graph_store.structured_query(query)
+        results = graph_store.structured_query(query_direct)
         if results:
-            return [r['relation'] for r in results]
-        return []
+            return {"type": "direct", "records": results}
     except Exception as e:
-        print(f"Cypher Error: {e}")
-        return []
+        print(f"Cypher Direct Query Error: {e}")
+
+    # 2. Truy vấn gián tiếp qua nút trung gian (Multi-hop Causal: e.g. Enzyme / Transporter)
+    query_multihop = f"""
+    MATCH (d1)-[r1]-(m)-[r2]-(d2)
+    WHERE (toLower(coalesce(d1.name, d1.id, '')) = '{drug_a}' OR toLower(coalesce(d1.id, d1.name, '')) = '{drug_a}')
+      AND (toLower(coalesce(d2.name, d2.id, '')) = '{drug_b}' OR toLower(coalesce(d2.id, d2.name, '')) = '{drug_b}')
+      AND NOT (d1 = d2)
+    RETURN coalesce(d1.name, d1.id) as s_name, type(r1) as r1_type, properties(r1) as r1_props,
+           coalesce(m.name, m.id) as m_name, labels(m) as m_labels,
+           type(r2) as r2_type, properties(r2) as r2_props,
+           coalesce(d2.name, d2.id) as t_name
+    LIMIT 5
+    """
+    try:
+        results_hop = graph_store.structured_query(query_multihop)
+        if results_hop:
+            return {"type": "multihop", "records": results_hop}
+    except Exception as e:
+        print(f"Cypher Multi-hop Query Error: {e}")
+
+    return {"type": "none", "records": []}
 
 class AdaptiveGraphQueryEngine(CustomQueryEngine):
     """Định tuyến và Viết lại câu hỏi Graph dựa trên LLM 8B trọng tài."""
@@ -95,11 +119,11 @@ class AdaptiveGraphQueryEngine(CustomQueryEngine):
     graph_store: object
 
     def custom_query(self, query_str: str):
-        # 1. Trọng tài 8B bóc tách thực thể
+        # 1. Trọng tài bóc tách thực thể thuốc/hóa chất/thực phẩm
         prompt = (
-            f"Trích xuất chính xác 2 tên thuốc/hóa chất từ câu hỏi sau. "
-            f"CHỈ trả về 2 tên thuốc, cách nhau bằng dấu phẩy. "
-            f"Nếu câu hỏi không có đủ 2 tên thuốc, CHỈ trả về chữ 'NONE'. "
+            f"Trích xuất tất cả các tên thuốc, hóa chất, thảo dược hoặc thực phẩm/đồ uống (như bưởi chùm, rượu, diazepam, v.v.) từ câu hỏi sau. "
+            f"CHỈ trả về danh sách tên các chất, cách nhau bằng dấu phẩy (ví dụ: Diazepam, Lorazepam, Alcohol). "
+            f"Nếu câu hỏi không chứa ít nhất 2 chất, CHỈ trả về chữ 'NONE'. "
             f"Không giải thích thêm. Câu hỏi: '{query_str}'"
         )
         try:
@@ -107,50 +131,95 @@ class AdaptiveGraphQueryEngine(CustomQueryEngine):
         except Exception:
             decision = "NONE"
 
-        print(f"\n[Adaptive Graph] Trong tai 8b boc tach: {decision}")
+        print(f"\n[Adaptive Graph] Trong tai boc tach: {decision}")
         
         if decision.upper() != "NONE" and "," in decision:
-            parts = [p.strip() for p in decision.split(",")]
+            parts = [p.strip() for p in decision.split(",") if p.strip()]
             if len(parts) >= 2:
                 import itertools
                 
                 nodes_dict = {}
                 links = []
+                hints = []
                 found_any = False
                 
                 for a, b in itertools.combinations(parts, 2):
                     print(f"[Adaptive Graph] Kich hoat Cypher Exact Match cho: '{a}' va '{b}'")
-                    relations = exact_interaction_query(self.graph_store, a, b)
-                    if relations:
+                    res = exact_interaction_query(self.graph_store, a, b)
+                    
+                    if res["type"] == "direct":
                         found_any = True
-                        relations = list(set(relations))
-                        rel_str = ", ".join(relations)
-                        print(f"[Adaptive Graph] Tim thay bang Cypher: {rel_str}")
+                        records = res["records"]
+                        a_key = a.lower()
+                        b_key = b.lower()
                         
-                        if a not in nodes_dict:
-                            nodes_dict[a] = {"id": a, "name": a.capitalize(), "group": len(nodes_dict) % 5 + 1}
-                        if b not in nodes_dict:
-                            nodes_dict[b] = {"id": b, "name": b.capitalize(), "group": len(nodes_dict) % 5 + 1}
+                        if a_key not in nodes_dict:
+                            nodes_dict[a_key] = {"id": a_key, "name": a.capitalize(), "group": 1}
+                        if b_key not in nodes_dict:
+                            nodes_dict[b_key] = {"id": b_key, "name": b.capitalize(), "group": 2}
+
+                        for r in records:
+                            rel_name = r.get("relation", "INTERACTS_WITH")
+                            props = r.get("props", {}) or {}
+                            links.append({"source": a_key, "target": b_key, "label": rel_name})
                             
-                        links.append({"source": a, "target": b, "label": rel_str})
+                            detail_items = []
+                            for k in ["severity", "clinical_effect", "dosage", "reason", "role", "action"]:
+                                if props.get(k):
+                                    detail_items.append(f"{k}: {props[k]}")
+                            detail_str = f" ({', '.join(detail_items)})" if detail_items else ""
+                            hints.append(f"- Trực tiếp: {a.capitalize()} và {b.capitalize()} có liên kết '{rel_name}'{detail_str}")
+
+                    elif res["type"] == "multihop":
+                        found_any = True
+                        records = res["records"]
+                        for r in records:
+                            s = r.get("s_name", a)
+                            m = r.get("m_name", "Mediator")
+                            t = r.get("t_name", b)
+                            r1 = r.get("r1_type", "AFFECTS")
+                            r2 = r.get("r2_type", "METABOLIZED_BY")
+                            
+                            s_key = s.lower()
+                            m_key = m.lower()
+                            t_key = t.lower()
+                            
+                            if s_key not in nodes_dict:
+                                nodes_dict[s_key] = {"id": s_key, "name": s, "group": 1}
+                            if m_key not in nodes_dict:
+                                nodes_dict[m_key] = {"id": m_key, "name": m, "group": 3}
+                            if t_key not in nodes_dict:
+                                nodes_dict[t_key] = {"id": t_key, "name": t, "group": 2}
+                                
+                            links.append({"source": s_key, "target": m_key, "label": r1})
+                            links.append({"source": t_key, "target": m_key, "label": r2})
+                            hints.append(f"- Gián tiếp nhân quả: {s} -[{r1}]-> {m} <-[{r2}]- {t}")
                         
                 if found_any:
                     graph_data = {
                         "nodes": list(nodes_dict.values()),
                         "links": links
                     }
+                    hint_str = "\n".join(hints)
                     
-                    hints = []
-                    for link in links:
-                        hints.append(f"{link['source']} và {link['target']} có quan hệ '{link['label']}'")
-                    hint_str = "; ".join(hints)
+                    answer_prompt = (
+                        f"Bạn là chuyên gia Dược lý học lâm sàng. Dựa trên dữ liệu đồ thị tri thức y khoa đã được xác thực từ cơ sở dữ liệu sau đây:\n"
+                        f"{hint_str}\n\n"
+                        f"Hãy trả lời câu hỏi của người dùng một cách rõ ràng, chính xác, khách quan bằng tiếng Việt:\n"
+                        f"Câu hỏi: '{query_str}'\n\n"
+                        f"Yêu cầu:\n"
+                        f"1. Khẳng định rõ các mối tương tác / cơ chế đã tìm thấy trong cơ sở dữ liệu đồ thị.\n"
+                        f"2. Nếu là liên kết trực tiếp: giải thích rõ mức độ nghiêm trọng (severity), tác động lâm sàng hoặc khuyến cáo liều.\n"
+                        f"3. Nếu là liên kết gián tiếp (qua enzyme/transporter/thụ thể): giải thích cơ chế dược động học (VD: ức chế men chuyển hóa làm tăng độc tính).\n"
+                        f"4. Tuyệt đối KHÔNG nói 'không tìm thấy thông tin' đối với các thực thể đã được xác thực ở trên."
+                    )
+                    try:
+                        llm_answer = self.referee_llm.complete(answer_prompt).text.strip()
+                    except Exception as e:
+                        llm_answer = f"Theo dữ liệu từ đồ thị tri thức y khoa:\n{hint_str}"
                     
-                    rich_query = f"{query_str}\n(Gợi ý từ DB: {hint_str}). Trả lời tự nhiên bằng tiếng Việt."
-                    res = self.base_engine.query(rich_query)
-                    
-                    metadata = res.metadata or {}
-                    metadata["graph_data"] = graph_data
-                    return Response(response=res.response, source_nodes=res.source_nodes, metadata=metadata)
+                    metadata = {"graph_data": graph_data}
+                    return Response(response=llm_answer, source_nodes=[], metadata=metadata)
                 else:
                     print(f"[Adaptive Graph] Cypher khong tim thay. Chuyen sang Graph Walk mo...")
         
@@ -164,6 +233,7 @@ def get_sandbox_graph_data(drugs: list[str]) -> dict:
     uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     username = os.getenv("NEO4J_USERNAME", "neo4j")
     password = os.getenv("NEO4J_PASSWORD", "password")
+    database = os.getenv("NEO4J_DATABASE", "neo4j")
     
     if not drugs:
         return {"nodes": [], "links": []}
@@ -173,8 +243,8 @@ def get_sandbox_graph_data(drugs: list[str]) -> dict:
     
     query = """
     MATCH (a)-[r]-(b)
-    WHERE toLower(a.id) IN $drugs AND toLower(b.id) IN $drugs
-    RETURN a.id AS a_id, type(r) AS rel_type, b.id AS b_id
+    WHERE toLower(coalesce(a.id, a.name, '')) IN $drugs AND toLower(coalesce(b.id, b.name, '')) IN $drugs
+    RETURN coalesce(a.id, a.name) AS a_id, type(r) AS rel_type, coalesce(b.id, b.name) AS b_id
     """
     
     nodes_dict = {}
@@ -183,7 +253,7 @@ def get_sandbox_graph_data(drugs: list[str]) -> dict:
     for i, d in enumerate(drugs):
         nodes_dict[d.lower()] = {"id": d.lower(), "name": d.capitalize(), "group": i % 5 + 1}
         
-    with driver.session() as session:
+    with driver.session(database=database) as session:
         result = session.run(query, drugs=drugs_lower)
         
         grouped_links = {}
